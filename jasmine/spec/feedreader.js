@@ -98,11 +98,10 @@ $(function() {
 			});
 		});
 
-		it('ensures, after loadFeed function completes its work, there is at least a single .entry element within the .feed container', function(done) {
+		it('ensures, after loadFeed function completes its work, there is at least a single .entry element within the .feed container', function() {
 			var feedLength = document.querySelector('.feed').getElementsByClassName('entry').length;
 			//console.log(feedLength);
 			expect(feedLength).not.toBe(0);
-			done();
 		});
 	});
 
@@ -126,9 +125,8 @@ $(function() {
 			});
 		});
 
-		it('ensures when a new feed is loaded by the loadFeed function that the content actually changes', function(done) {
+		it('ensures when a new feed is loaded by the loadFeed function that the content actually changes', function() {
 			expect(newFeed).not.toBe(initFeed);
-			done();
 		});
 	});
 }());
