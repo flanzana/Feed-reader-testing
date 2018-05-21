@@ -116,10 +116,10 @@ $(function() {
 
 		beforeEach(function(done) {
 			loadFeed(0, function() {
-				initFeed = $('.feed');
+				initFeed = $('.feed').html();
 
 				loadFeed(1, function() {
-					newFeed = $('.feed');
+					newFeed = $('.feed').html();
 					done();
 				});
 			});
